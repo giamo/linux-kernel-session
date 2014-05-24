@@ -13,9 +13,9 @@ See the test client for how to use the new system calls once the kernel is in us
 System calls
 ------------
 
-_int open\_session (int fd, struct file *f)_: opens the file in special session mode
-_size\_t read\_session (struct file *f, char *buf, int count)_: reads _count_ bytes into _buf_ from the file session
-_ssize\_t write\_session (struct file *f, const char *buf, int count)_: writes _count_ bytes from _buf_ into the file session
-_off\_t lseek\_session (struct file *f, off\_t offset, int whence)_: moves the file pointer into the session
-_int share\_session (struct file *f)_: adds the current process to the ones sharing the file session
-_int close\_session (struct file *f)_: closes the file and flushes the session content on disk
+- `int open_session (int fd, struct file *f)`: opens the file in special session mode
+- `size_t read_session (struct file *f, char *buf, int count)`: reads _count_ bytes into _buf_ from the file session
+- `ssize_t write_session (struct file *f, const char *buf, int count)`: writes _count_ bytes from _buf_ into the file session
+- `off_t lseek_session (struct file *f, off_t offset, int whence)`: moves the file pointer into the session
+- `int share_session (struct file *f)`: adds the current process to the ones sharing the file session
+- `int close_session (struct file *f)`: closes the file and flushes the session content on disk
